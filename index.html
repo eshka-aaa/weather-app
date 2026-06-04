@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌤 Weather App</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>🌤 Weather App</h1>
+
+    <input
+      id="cityInput"
+      type="text"
+      placeholder="Enter city"
+    >
+
+    <button id="searchBtn">Search</button>
+    <button id="saveCityBtn">⭐ Save city</button>
+    <button id="locationBtn">📍 My location</button>
+    <button id="clearBtn">Clear</button>
+    <button id="unitBtn">°F</button>
+
+    <div id="favoriteCities"></div>
+
+    <h3>Recent</h3>
+    <div id="recentCities"></div>
+
+    <div id="weather"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

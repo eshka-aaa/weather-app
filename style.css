@@ -1,0 +1,240 @@
+/* ===============================
+   Global styles
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #222;
+  transition: 0.4s;
+}
+
+/* ===============================
+   Main container
+================================ */
+
+.container {
+  width: 90%;
+  max-width: 420px;
+  padding: 25px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+
+  border-radius: 24px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   Form elements
+================================ */
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+
+  border: none;
+  border-radius: 14px;
+  outline: none;
+
+  font-size: 16px;
+}
+
+button {
+  padding: 12px 16px;
+  margin: 5px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: #4f46e5;
+  color: white;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   Weather card
+================================ */
+
+#weather {
+  margin-top: 22px;
+}
+
+.weather-card {
+  padding: 22px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border-radius: 22px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.weather-card h1 {
+  margin: 10px 0;
+  font-size: 48px;
+}
+
+.weather-card h2 {
+  margin-bottom: 5px;
+}
+
+.weather-icon {
+  margin: 10px 0;
+  font-size: 48px;
+}
+
+.city-time {
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  font-size: 14px;
+  opacity: 0.65;
+}
+
+.feel-label {
+  display: inline-block;
+
+  margin-top: 6px;
+  padding: 6px 12px;
+
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.25);
+
+  font-size: 14px;
+}
+
+/* ===============================
+   Forecast
+================================ */
+
+.forecast {
+  margin-top: 22px;
+}
+
+.forecast h3 {
+  margin-bottom: 12px;
+}
+
+.forecast-day {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 10px 0;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   Saved and recent cities
+================================ */
+
+#favoriteCities {
+  margin-top: 18px;
+}
+
+#recentCities {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 10px;
+}
+
+.city-item {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+
+  margin-top: 8px;
+}
+
+.city-item button:first-child {
+  flex: 1;
+}
+
+/* ===============================
+   Dynamic weather backgrounds
+================================ */
+
+.cold-bg {
+  background: linear-gradient(135deg, #83a4d4, #b6fbff);
+}
+
+.rain-bg {
+  background: linear-gradient(135deg, #4b79a1, #283e51);
+  color: white;
+}
+
+.cloud-bg {
+  background: linear-gradient(135deg, #bdc3c7, #2c3e50);
+  color: white;
+}
+
+.sun-bg {
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+}
+
+.hot-bg {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: white;
+}
+
+/* Darker cards on dark backgrounds */
+
+.rain-bg .container,
+.cloud-bg .container,
+.hot-bg .container {
+  background: rgba(20, 20, 20, 0.65);
+  color: white;
+}
+
+.rain-bg .weather-card,
+.cloud-bg .weather-card,
+.hot-bg .weather-card {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ===============================
+   Mobile
+================================ */
+
+@media (max-width: 500px) {
+  .container {
+    width: 94%;
+    padding: 18px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .city-item {
+    flex-direction: column;
+  }
+}
